@@ -1,2 +1,7 @@
-<h2>Convert url</h2>
-	<%= link_to("new url", urls_new_path)%>
+<h2><%= link_to("new url", urls_new_path)%></h2>
+
+<ul>
+	<% @url.each do |u| %>
+		<li><%= u.url%></li>
+	<%end%>
+</ul>
