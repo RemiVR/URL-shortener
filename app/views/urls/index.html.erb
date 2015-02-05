@@ -2,6 +2,8 @@
 
 <ul>
 	<% @url.each do |u| %>
-		<li><%= u.url %></li>
+		<li><%= u.url %>
+		Visited: <%= u.count%>
+		</li>
 	<%end%>
 </ul>

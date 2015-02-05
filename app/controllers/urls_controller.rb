@@ -1,9 +1,11 @@
 class UrlsController < ApplicationController
 	def index
-		@url = Url.order("created_at DESC")
+		@url = Url.order("created_at")
 	end
 	def show
     	@url = Url.find(params[:urls_id])
+    	@url.count += 1
+    	@url.save
     	redirect_to @url.url
 	end
 	def new

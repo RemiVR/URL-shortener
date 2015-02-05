@@ -1,6 +1,8 @@
 <h1>Display url</h1>
-	<ul>
+	<ul><% @url.each do |url|%>
 			<li>
-		<%= @url.url%>
+		<%= url.url%>
+		<%= url.count%>
 			</li>
+			<%end%>
 	</ul>
