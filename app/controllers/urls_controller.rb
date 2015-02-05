@@ -19,6 +19,6 @@ class UrlsController < ApplicationController
 	end
 	private
 	def entry_params
-		params.require(:url).permit(:url)
+		params.require(:url).permit(:url, :short_url)
 	end
 end
